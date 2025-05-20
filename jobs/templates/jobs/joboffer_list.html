@@ -1,0 +1,11 @@
+<!-- joboffer_list.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Job Offers</title></head>
+<body>
+  <h1>Liste des offres</h1>
+  {% for offer in object_list %}
+    <p>{{ offer.title }}</p>
+  {% endfor %}
+</body>
+</html>
