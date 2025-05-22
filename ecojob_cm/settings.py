@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from pathlib import Path
+from pathlib import Path , os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'rest_framework',
-    'jobs',
     'django_filters',
+    'jobs.apps.JobsConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,14 +51,17 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "ecojob_cm.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        'DIRS': [os.path.join(BASE_DIR,  'templates')],  # Chemin vers le dossier des templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -133,3 +137,17 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
+
+AUTH_USER_MODEL = 'jobs.User'  # Remplacez 'jobs' par le nom de votre app
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # username par défaut
+    'jobs.auth_backend.EmailBackend',          # email login
+]
+
+LOGIN_REDIRECT_URL = '/collecteur/dashboard.html'
+
+LOGIN_URL = '/templates/login.html'
+
+# settings.py
+APPEND_SLASH = True

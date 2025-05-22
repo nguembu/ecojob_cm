@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #60ad5e;
+  --primary-dark: #005005;
+  --text-color: #333;
+  --light-text: #777;
+  --border-color: #ddd;
+  --background: #f5f5f5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.tagline {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+/* Ajout du style du container logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.logo-container svg {
+  flex-shrink: 0;
+}
+
+.logo-container .logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-container .tagline {
+  color: var(--light-text);
+  font-size: 1.1rem;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.auth-tab {
+  flex: 1;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--light-text);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.auth-tab.active {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.auth-form {
+  display: block;
+}
+.auth-form.hidden {
+  display: none;
+}
+.auth-form h2 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.role-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.3rem;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Florals (placeholders to be replaced by real flower SVG or PNG) */
+.floral-decoration {
+  position: fixed;
+  z-index: 0;
+  width: 180px;
+  height: 180px;
+  background-image: url('../css/assets/flower-deco.png'); /* Replace with actual floral image */
+  background-size: cover;
+  opacity: 0.6;
+}
+.top-right {
+  top: -30px;
+  right: -30px;
+}
+.bottom-left {
+  bottom: -30px;
+  left: -30px;
+}

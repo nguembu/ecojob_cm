@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoJob CM - Connecting Youth to Green Jobs</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="floral-decoration top-right"></div>
+  <div class="floral-decoration bottom-left"></div>
+
+  <div class="container">
+    <header class="header">
+      <!-- Logo SVG simple -->
+      <div class="logo-container">
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo EcoJob">
+          <circle cx="32" cy="32" r="30" stroke="#2e7d32" stroke-width="4"/>
+          <path d="M20 32 L32 44 L44 20" stroke="#2e7d32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="logo">EcoJob CM</h1>
+      </div>
+      <p class="tagline">Connecting Youth to Green Jobs</p>
+    </header>
+
+    <main class="main-content">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="signup-tab" type="button">Sign Up</button>
+        <button class="auth-tab" id="login-tab" type="button">Log In</button>
+      </div>
+
+      <form class="auth-form" id="signup-form">
+  <h2>S'inscrire</h2>
+  <div class="form-group">
+    <label>Nom</label>
+    <input type="text" name="name" placeholder="Votre nom complet" required />
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+  </div>
+  <div class="form-group">
+    <label>Mot de passe</label>
+    <input type="password" name="password" placeholder="Créez un mot de passe" required />
+  </div>
+  <div class="form-group">
+    <label>Confirmez le mot de passe</label>
+    <input type="password" name="password2" placeholder="Confirmez le mot de passe" required />
+  </div>
+  <div class="form-group">
+    <label>Rôle</label>
+    <div class="role-options">
+      <label><input type="radio" name="role" value="collector" required /> Collecteur</label>
+      <label><input type="radio" name="role" value="recruiter" /> Recruteur</label>
+      <label><input type="radio" name="role" value="buyer" /> Acheteur</label>
+    </div>
+  </div>
+  <button class="submit-btn" type="submit">S'inscrire</button>
+</form>
+
+      <form class="auth-form hidden" id="login-form">
+        <h2>Se connecter</h2>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+        </div>
+        <div class="form-group">
+          <label>Mot de passe</label>
+          <input type="password" name="password" placeholder="Votre mot de passe" required />
+        </div>
+        <button class="submit-btn" type="submit">Se connecter</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/static/js/main.js" defer></script>
+</body>
+</html>

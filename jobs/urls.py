@@ -7,8 +7,13 @@ from .views import (
     ApplicationViewSet,
     JobOfferListView,
     JobOfferDetailView,
-    JobOfferDetailAPIView
+    JobOfferDetailAPIView,
+    UserRegisterView,
+    UserView,
+    UserLoginView
+    
 )
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 app_name = 'jobs'
 

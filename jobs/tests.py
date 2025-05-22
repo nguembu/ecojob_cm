@@ -18,7 +18,7 @@ class JobOfferAPITest(APITestCase):
             title='Developer',
             description='Job description',
             location='Remote',
-            company=self.company
+            company=self.company,
             contract_type='Full-time',
         )
     
@@ -95,7 +95,7 @@ class JobOfferAPITest(TestCase):
             title='Developer',
             description='Python Developer',
             location='Remote',
-            company='TechCorp'
+            company='TechCorp',
         )
 
     def test_retrieve_job_offer(self):

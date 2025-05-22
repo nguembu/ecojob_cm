@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Détail de l'offre</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Détail de l'offre</h1>
+    <nav><a href="offers.html">Retour aux Offres</a></nav>
+  </header>
+  <main id="offer-detail-container"></main>
+  <script type="module">
+    import { loadOfferDetail } from 'static/js/offer_detail.js';
+    loadOfferDetail('offer-detail-container');
+  </script>
+</body>
+</html>

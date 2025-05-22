@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="logo">
+        {% if logo %}
+            <img src="{{ logo.url }}" alt="EcoJob CM Logo">
+        {% else %}
+            <span>EC</span>
+        {% endif %}
+    </div>
+    <h1>EcoJob CM</h1>
+    <p class="tagline">Connecting Youth to Green Jobs</p>
+    
+    <a href="{% url 'signup' %}" class="btn btn-signup">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn btn-login">Log In</a>
+</div>
+{% endblock %}
